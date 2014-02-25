@@ -1,4 +1,4 @@
-" emilisto's vimrc
+" joch's vimrc
 "
 " I use Janus Vim Distribution, and I think this vimrc is not much use without
 " it.
@@ -7,6 +7,7 @@
 "
 " Rightfully stolen/inspired from:
 "
+"   https://github.com/emilisto/dotfiles/blob/master/dotfiles/dot.vimrc.local
 "   https://github.com/ryanb/dotfiles/blob/master/vimrc
 "   http://stevelosh.com/blog/2010/09/coming-home-to-vim/#using-the-leader
 "   https://github.com/rtomayko/dotfiles/blob/rtomayko/.vimrc
