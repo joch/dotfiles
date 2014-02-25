@@ -5,9 +5,11 @@ My dotfiles for easily getting up to speed on a new machine.
 Not complete as of yet, but the framework is in place.
 
 ## Install
-```git clone https://github.com/joch/dotfiles.git ~/.dotfiles
+```
+git clone https://github.com/joch/dotfiles.git ~/.dotfiles
 cd ~/.dotfiles
-./install.sh```
+./install.sh
+```
 
 ## TODO
 
