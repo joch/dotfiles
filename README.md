@@ -5,6 +5,9 @@ My dotfiles for easily getting up to speed on a new machine.
 Not complete as of yet, but the framework is in place.
 
 ## Install
+
+Begin by installing `zsh`, `rake` and `git`. Then run:
+
 ```
 git clone https://github.com/joch/dotfiles.git ~/.dotfiles
 cd ~/.dotfiles
