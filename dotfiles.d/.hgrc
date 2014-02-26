@@ -1,0 +1,15 @@
+[ui]
+#username = Johnny Chadda <johnny@nodomain>
+merge = internal:merge
+
+[extensions]
+mq =
+pager =
+hgflow=~/.hg/ext/hgflow.py
+
+[flow]
+autoshelve = true
+
+[pager]
+pager = LESS='FRX' less
+
