@@ -4,8 +4,10 @@ merge = internal:merge
 
 [extensions]
 mq =
+rebase =
 pager =
 hgflow=~/.hg/ext/hgflow.py
+
 
 [flow]
 autoshelve = true
