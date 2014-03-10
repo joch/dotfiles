@@ -50,5 +50,5 @@ done
 info "Installing file links..."
 cd $BASEDIR/dotfiles.d/
 find . -type d -exec mkdir -p $HOME/{} \;
-find . -type f -exec ln -s $BASEDIR/dotfiles.d/{} $HOME/{} \;
+find . -type f -exec ln -sfv $BASEDIR/dotfiles.d/{} $HOME/{} \;
 
