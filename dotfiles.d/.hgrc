@@ -4,6 +4,7 @@ merge = internal:merge
 
 [extensions]
 mq =
+histedit =
 rebase =
 pager =
 hgflow=~/.hg/ext/hgflow.py
