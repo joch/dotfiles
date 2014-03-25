@@ -35,8 +35,8 @@
     "setl ts=2 sw=2 sts=2 et
     setl ts=4 sw=4 sts=4 et
  
-    au FileType python setl ts=4 sw=4 sts=4 expandtab
-    "au FileType python setl ts=4 sw=4 sts=4 noexpandtab
+    "au FileType python setl ts=4 sw=4 sts=4 expandtab
+    au FileType python setl ts=4 sw=4 sts=4 noexpandtab
     au FileType c setl ts=4 sw=4 sts=4 expandtab
  
     " How long vim waits before executing a command if there are still other
@@ -55,8 +55,8 @@
     " Start scrolling when only 10 lines are left to the screen bottom
     set so=10
  
-    nmap > :split<cr>
-    nmap < :vsplit<cr>
+    "nmap > :split<cr>
+    "nmap < :vsplit<cr>
  
     if ! has("gui_running")
       color desert
