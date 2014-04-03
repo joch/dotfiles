@@ -35,8 +35,8 @@
     "setl ts=2 sw=2 sts=2 et
     setl ts=4 sw=4 sts=4 et
  
-    "au FileType python setl ts=4 sw=4 sts=4 expandtab
-    au FileType python setl ts=4 sw=4 sts=4 noexpandtab
+    au FileType python setl ts=4 sw=4 sts=4 expandtab
+    "au FileType python setl ts=4 sw=4 sts=4 noexpandtab
     au FileType c setl ts=4 sw=4 sts=4 expandtab
  
     " How long vim waits before executing a command if there are still other
@@ -135,9 +135,10 @@
     nmap <C-d> :NERDTreeToggle<cr>
     "let g:nerdtree_tabs_open_on_console_startup=1
     "au VimEnter *  NERDTree
-    "let NERDTreeMapOpenInTab='<ENTER>'
-    map <C-d> <plug>NERDTreeTabsToggle<CR>
+    let NERDTreeMapOpenInTab='<ENTER>'
+    "map <C-d> <plug>NERDTreeTabsToggle<CR>
     "let g:nerdtree_tabs_open_on_console_startup=1
+    let NERDTreeQuitOnOpen = 1
  
     nmap <C-p> :CtrlP<cr>
     nmap <C-]> :CtrlPMRU<cr>
