@@ -8,7 +8,7 @@ histedit =
 rebase =
 pager =
 hgflow=~/.hg/ext/hgflow.py
-
+shelve =
 
 [flow]
 autoshelve = true
