@@ -6,6 +6,8 @@ if [ ! -d "$HOME/.hg/ext/mercurial-cli-templates" ]; then
     hg clone http://bitbucket.org/sjl/mercurial-cli-templates/ $HOME/.hg/ext/mercurial-cli-templates
     success "$app installed"
 else
-    warning "$app already installed, skipping..."
+    info "$app already installed, upgrading..."
+    cd $HOME/.hg/ext/mercurial-cli-templates
+    hg pull -u
 fi
 
