@@ -15,6 +15,7 @@ pager =
 purge =
 hgflow=~/.hg/ext/hgflow.py
 shelve =
+color =
 
 [flow]
 autoshelve = true
