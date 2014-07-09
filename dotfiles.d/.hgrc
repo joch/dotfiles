@@ -3,9 +3,9 @@
 merge = internal:merge
 
 [alias]
-slog = log --style=~/.hg/ext/mercurial-cli-templates/map-cmdline.slog
-nlog = log --style=~/.hg/ext/mercurial-cli-templates/map-cmdline.nlog
-sglog = glog --style=~/.hg/ext/mercurial-cli-templates/map-cmdline.sglog
+slog = log --style ~/.hg/ext/mercurial-cli-templates/map-cmdline.slog
+nlog = log --style ~/.hg/ext/mercurial-cli-templates/map-cmdline.nlog
+sglog = glog --style ~/.hg/ext/mercurial-cli-templates/map-cmdline.sglog
 
 [extensions]
 mq =
