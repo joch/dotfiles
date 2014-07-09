@@ -3,7 +3,7 @@ set -e
 
 if [ ! -d "$HOME/.hg/ext/mercurial-cli-templates" ]; then
     mkdir -p $HOME/.hg/ext
-    hg clone http://bitbucket.org/sjl/mercurial-cli-templates/ $HOME/.hg/ext/mercurial-cli-templates
+    hg clone https://bitbucket.org/sjl/mercurial-cli-templates/ $HOME/.hg/ext/mercurial-cli-templates
     success "$app installed"
 else
     info "$app already installed, upgrading..."
