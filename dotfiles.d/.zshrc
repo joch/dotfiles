@@ -71,4 +71,4 @@ export PATH="$HOME/.linuxbrew/bin:$PATH"
 export LD_LIBRARY_PATH="$HOME/.linuxbrew/lib:$LD_LIBRARY_PATH"
 
 alias gist='gist -pcs'
-
+alias gpullall='git pull --recurse-submodules && git submodule init && git submodule update --recursive'
