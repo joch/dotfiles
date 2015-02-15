@@ -45,7 +45,7 @@ ZSH_THEME="robbyrussell"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(brew git github history-substring-search mercurial osx python sublime sudo svn tmux)
+plugins=(brew docker git git-flow github history-substring-search mercurial osx python sublime sudo svn tmux tmuxinator vagrant z)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -66,6 +66,9 @@ export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/g
 
 # ssh
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
+
+# Activate Z
+. `brew --prefix`/etc/profile.d/z.sh
 
 export PATH="$HOME/.linuxbrew/bin:$PATH"
 export LD_LIBRARY_PATH="$HOME/.linuxbrew/lib:$LD_LIBRARY_PATH"
