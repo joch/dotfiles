@@ -70,6 +70,9 @@ export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/g
 # Activate Z
 . `brew --prefix`/etc/profile.d/z.sh
 
+# tmux
+export DISABLE_AUTO_TITLE=true
+
 export PATH="$HOME/.linuxbrew/bin:$PATH"
 export LD_LIBRARY_PATH="$HOME/.linuxbrew/lib:$LD_LIBRARY_PATH"
 
