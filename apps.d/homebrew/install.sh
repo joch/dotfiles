@@ -8,7 +8,7 @@ if [ $? -ne 0 ]; then
         success "$app installed"
     elif [ $OS == "darwin" ]; then
         ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
-        brew install tmux zsh
+        brew install ag tmux zsh z
         success "$app installed"
     else
         warning "Sorry, not implemented for $OS yet.."
