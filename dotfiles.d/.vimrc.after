@@ -156,7 +156,8 @@ endif
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Folding
-  :set foldmethod=indent
+  set foldmethod=indent
+  set foldnestmax=2
   nnoremap <space> za
   vnoremap <space> zf
 
