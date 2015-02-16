@@ -15,13 +15,17 @@
  
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Basics
- 
+
+    set t_Co=256
+    set textwidth=80
     set autoindent
     set smartindent
     set expandtab
 
     set mouse=a
     set showtabline=2
+
+    let mapleader = ","
 
     nnoremap <C-S-tab> :tabprevious<CR>
     nnoremap <C-tab>   :tabnext<CR>
@@ -55,8 +59,8 @@
     " Start scrolling when only 10 lines are left to the screen bottom
     set so=10
  
-    "nmap > :split<cr>
-    "nmap < :vsplit<cr>
+    nmap > :split<cr>
+    nmap < :vsplit<cr>
  
     if ! has("gui_running")
       color desert
@@ -116,7 +120,46 @@
     nnoremap ` @a
  
     nmap <C-r> :tabe<cr><D-t>
- 
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Status line
+" The default statusline in janus is pretty bad, improve it
+if has("statusline")
+    " taken from janus/vim/core/before/plugin/statuline.vim (63c0aac004)
+    " Start the status line
+    set statusline=%f
+    " Add fugitive if enabled
+    if janus#is_plugin_enabled('fugitive')
+        set statusline+=%{fugitive#statusline()}
+    endif
+    " Add syntastic if enabled
+    if janus#is_plugin_enabled('syntastic')
+        set statusline+=%#warningmsg#
+        set statusline+=%{SyntasticStatuslineFlag()}
+        set statusline+=%*
+    endif
+    " end of janus copy&paste, we use our own ruler, a useful one
+    " begin right section
+    set statusline+=%=
+    " buffer
+    set statusline+=\:\b%n
+    " some properties
+    set statusline+=%M " modifiable?
+    set statusline+=%R " read only?
+    set statusline+=%H " help buffer?
+    set statusline+=%W " preview window?
+    set statusline+=%Y " file type
+    set statusline+=,%{&encoding},%{&fileformat}
+    set statusline+=\ %l,%c%V\ %P " classic vim ruler
+endif
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Folding
+  :set foldmethod=indent
+  nnoremap <space> za
+  vnoremap <space> zf
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Plugin shortcuts
  
@@ -124,12 +167,13 @@
     "nmap <C-g><C-s> :Gstatus<cr>
     "nmap <C-g><C-l> :Glog<cr>
     "
-    "nmap <leader>g :Gstatus<cr>
-    "nmap <leader>gw :Gwrite<cr>
-    "nmap <leader>gc :Gcommit<cr>
-    "nmap <leader>gca :Gcommit --amend<cr>
-    "nmap <leader>gwc :Gwrite<cr>:Gcommit<cr>
-    "nmap <leader>gwa :Gwrite<cr>:Gcommit --amend<cr>
+    nmap <leader>g :Gstatus<cr>
+    nmap <leader>gw :Gwrite<cr>
+    nmap <leader>gc :Gcommit<cr>
+    nmap <leader>gb :Gblame<cr>
+    nmap <leader>gca :Gcommit --amend<cr>
+    nmap <leader>gwc :Gwrite<cr>:Gcommit<cr>
+    nmap <leader>gwa :Gwrite<cr>:Gcommit --amend<cr>
  
     " NERDTree shortcuts
     nmap <C-d> :NERDTreeToggle<cr>
@@ -169,7 +213,6 @@
     set wildignore+=*.so,*.swp,*.zip,*collected*,chef/tmp
  
     let g:EasyMotion_leader_key = '<leader><leader>'
- 
  
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Assorted magic
