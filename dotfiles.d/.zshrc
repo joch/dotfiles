@@ -70,6 +70,9 @@ export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/g
 # Activate Z
 . `brew --prefix`/etc/profile.d/z.sh
 
+# Init boot2docker
+$(boot2docker shellinit 2>/dev/null)
+
 # tmux
 export DISABLE_AUTO_TITLE=true
 
