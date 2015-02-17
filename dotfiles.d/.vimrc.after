@@ -63,7 +63,7 @@
     nmap < :vsplit<cr>
  
     if ! has("gui_running")
-      color desert
+      colorscheme desert
     endif
  
     " Make CtrlP always open the file in the current buffer, even if
@@ -175,7 +175,14 @@ endif
     nmap <leader>gca :Gcommit --amend<cr>
     nmap <leader>gwc :Gwrite<cr>:Gcommit<cr>
     nmap <leader>gwa :Gwrite<cr>:Gcommit --amend<cr>
- 
+
+    " gitgutter settings
+    highlight SignColumn ctermbg=none
+    highlight GitGutterAdd ctermbg=none ctermfg=green
+    highlight GitGutterChange ctermbg=none ctermfg=yellow
+    highlight GitGutterDelete ctermbg=none ctermfg=red
+    highlight GitGutterChangeDelete ctermbg=none ctermfg=blue
+
     " NERDTree shortcuts
     nmap <C-d> :NERDTreeToggle<cr>
     "let g:nerdtree_tabs_open_on_console_startup=1
