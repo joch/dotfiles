@@ -83,3 +83,14 @@ export LD_LIBRARY_PATH="$HOME/.linuxbrew/lib:$LD_LIBRARY_PATH"
 
 alias gist='gist -pcs'
 alias gpullall='git pull --recurse-submodules && git submodule init && git submodule update --recursive'
+
+EXTRADIR=~/.shell
+if [ -d "$EXTRADIR" ]; then
+  for F in `find $EXTRADIR/ -type f -o -type l | xargs`; do
+    if [ "$(basename $F)" != "local" ]; then
+      source $F
+    fi
+  done
+  # Load .bash/local last to make sure it overrides all others
+  test -e "$EXTRADIR/local" && source "$EXTRADIR/local"
+fi
