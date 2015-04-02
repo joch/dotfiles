@@ -83,6 +83,7 @@ export LD_LIBRARY_PATH="$HOME/.linuxbrew/lib:$LD_LIBRARY_PATH"
 
 alias gist='gist -pcs'
 alias gpullall='git pull --recurse-submodules && git submodule init && git submodule update --recursive'
+alias dc='docker-compose'
 
 EXTRADIR=~/.shell
 if [ -d "$EXTRADIR" ]; then
