@@ -71,19 +71,21 @@ export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/g
 . `brew --prefix`/etc/profile.d/z.sh
 
 # Init boot2docker
-$(boot2docker shellinit 2>/dev/null)
+#$(boot2docker shellinit 2>/dev/null)
 
 # tmux
 export DISABLE_AUTO_TITLE=true
 
 export EDITOR=vim
 
-export PATH="$HOME/.linuxbrew/bin:$PATH"
+export PATH="$HOME/go/bin:HOME/.linuxbrew/bin:$PATH"
+
 export LD_LIBRARY_PATH="$HOME/.linuxbrew/lib:$LD_LIBRARY_PATH"
 
 alias gist='gist -pcs'
 alias gpullall='git pull --recurse-submodules && git submodule init && git submodule update --recursive'
 alias dc='docker-compose'
+alias webshare='python -c "import SimpleHTTPServer;SimpleHTTPServer.test()"'
 
 EXTRADIR=~/.shell
 if [ -d "$EXTRADIR" ]; then
@@ -95,3 +97,9 @@ if [ -d "$EXTRADIR" ]; then
   # Load .bash/local last to make sure it overrides all others
   test -e "$EXTRADIR/local" && source "$EXTRADIR/local"
 fi
+
+# Go stuff
+export GOPATH=~/go
+
+eval "$(pyenv virtualenv-init -)"
+

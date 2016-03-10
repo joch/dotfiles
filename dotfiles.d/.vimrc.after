@@ -172,6 +172,7 @@ endif
     nmap <leader>gw :Gwrite<cr>
     nmap <leader>gc :Gcommit<cr>
     nmap <leader>gb :Gblame<cr>
+    nmap <leader>gd :Gdiff<cr>
     nmap <leader>gca :Gcommit --amend<cr>
     nmap <leader>gwc :Gwrite<cr>:Gcommit<cr>
     nmap <leader>gwa :Gwrite<cr>:Gcommit --amend<cr>
@@ -224,7 +225,11 @@ endif
  
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Assorted magic
- 
+
+    " Highligt rows longer than 80 chars
+    highlight OverLength ctermbg=red ctermfg=white guibg=#592929
+    match OverLength /\%81v.\+/
+
     " Search for selected text, forwards or backwards.
     vnoremap <silent> * :<C-U>
       \let old_reg=getreg('"')<Bar>let old_regtype=getregtype('"')<CR>
