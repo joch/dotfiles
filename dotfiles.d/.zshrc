@@ -84,6 +84,7 @@ export LD_LIBRARY_PATH="$HOME/.linuxbrew/lib:$LD_LIBRARY_PATH"
 
 alias gist='gist -pcs'
 alias gpullall='git pull --recurse-submodules && git submodule init && git submodule update --recursive'
+alias gbpurge='git branch --merged | grep -Ev "(\*|master|develop)" | xargs -n 1 git branch -d'
 alias dc='docker-compose'
 alias webshare='python -c "import SimpleHTTPServer;SimpleHTTPServer.test()"'
 
@@ -103,3 +104,5 @@ export GOPATH=~/go
 
 eval "$(pyenv virtualenv-init -)"
 
+
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
