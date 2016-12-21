@@ -9,7 +9,12 @@ if [ $? -ne 0 ]; then
         echo "Not installing on Linux..."
     elif [ $OS == "darwin" ]; then
         ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
-        brew install ag gist tmux zsh z
+        brew install Caskroom/cask/vagrant
+        brew install Caskroom/cask/virtualbox
+        brew tap d12frosted/emacs-plus
+        brew install emacs-plus
+        brew linkapps emacs-plus
+        brew install ag tmux zsh z
         success "$app installed"
     else
         warning "Sorry, not implemented for $OS yet.."
@@ -17,4 +22,3 @@ if [ $? -ne 0 ]; then
 else
     warning "$app already installed, skipping..."
 fi
-
