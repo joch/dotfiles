@@ -6,7 +6,7 @@ Not complete as of yet, but the framework is in place.
 
 ## Install
 
-Begin by installing `zsh`, `rake` and `git`. Then run:
+Run:
 
 ```
 git clone https://github.com/joch/dotfiles.git ~/.dotfiles
