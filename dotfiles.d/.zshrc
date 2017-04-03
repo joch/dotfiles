@@ -104,5 +104,10 @@ export GOPATH=~/go
 
 #eval "$(pyenv virtualenv-init -)"
 
+# From Homebrew
+source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+fpath=(/usr/local/share/zsh-completions $fpath)
+
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
