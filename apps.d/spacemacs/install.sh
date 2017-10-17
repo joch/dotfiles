@@ -9,5 +9,5 @@ fi
 
 if [ ! -L $HOME/.emacs.d/private ]; then
     rm -rf $HOME/.emacs.d/private
-    ln -s ~/.emacs.d/private $HOME/.dotfiles/apps.d/spacemacs/private
+    ln -s $HOME/.dotfiles/apps.d/spacemacs/private $HOME/.emacs.d/private
 fi
