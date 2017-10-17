@@ -6,3 +6,8 @@ if [ ! -d $HOME/.emacs.d ]; then
 else
     warning "$app already installed, skipping..."
 fi
+
+if [ ! -L $HOME/.emacs.d/private ]; then
+    rm -rf $HOME/.emacs.d/private
+    ln -s ~/.emacs.d/private $HOME/.dotfiles/apps.d/spacemacs/private
+fi
