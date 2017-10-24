@@ -74,7 +74,6 @@ values."
      (python :variables
              python-test-runner 'pytest)
      shell-scripts
-     spell-checking
      syntax-checking
      themes-megapack
      version-control
