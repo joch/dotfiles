@@ -87,6 +87,7 @@ alias gpullall='git pull --recurse-submodules && git submodule init && git submo
 alias gbpurge='git branch --merged | grep -Ev "(\*|master|develop)" | xargs -n 1 git branch -d'
 alias dc='docker-compose'
 alias webshare='python -c "import SimpleHTTPServer;SimpleHTTPServer.test()"'
+alias dev='LC_CTYPE=en_US.UTF-8 mosh dev tmux attach'
 
 EXTRADIR=~/.shell
 if [ -d "$EXTRADIR" ]; then
