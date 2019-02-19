@@ -1,5 +1,3 @@
-;; -*- mode: emacs-lisp -*-
-;; This file is loaded by Spacemacs at startup.
 ;; It must be stored in your home directory.
 
 (defun dotspacemacs/layers ()
@@ -51,7 +49,7 @@ values."
      markdown
      ;; org
      (shell :variables
-            shell-default-shell 'eshell
+            shell-default-shell 'multiterm
             shell-default-height 30
             shell-default-position 'bottom
             shell-default-full-span nil)
