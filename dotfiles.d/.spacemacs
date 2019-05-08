@@ -216,8 +216,7 @@ It should only modify the values of Spacemacs settings."
    dotspacemacs-default-font '("Fira Mono"
                                :size 12
                                :weight normal
-                               :width normal
-                               :powerline-scale 1.1)
+                               :width normal)
    ;; The leader key
    dotspacemacs-leader-key "SPC"
 
