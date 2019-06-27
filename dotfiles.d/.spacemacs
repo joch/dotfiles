@@ -476,8 +476,15 @@ you should place your code here."
   (global-vi-tilde-fringe-mode -1)
   (setq ranger-max-preview-size 1)
 
+  (defun uno-on-buffer (&optional b e)
+    (interactive "r")
+    (call-process-region b e "/usr/local/bin/uno" t t))
+
+  (global-set-key (kbd "C-\"") 'uno-on-buffer)
+
   (defun bb/setup-term-mode ()
     (evil-local-set-key 'insert (kbd "C-r") 'bb/send-C-r))
+
   (defun bb/send-C-r ()
     (interactive)
     (term-send-raw-string "\C-r"))
