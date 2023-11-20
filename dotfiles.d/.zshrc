@@ -64,6 +64,8 @@ export PATH="~/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
 # ssh
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
 
@@ -110,5 +112,7 @@ source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 fpath=(/usr/local/share/zsh-completions $fpath)
 
-
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
+export ZSH_HIGHLIGHT_HIGHLIGHTERS_DIR=/opt/homebrew/share/zsh-syntax-highlighting/highlighters
+
