@@ -45,7 +45,7 @@ DISABLE_AUTO_TITLE="true"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(brew docker git git-flow github history-substring-search mercurial osx python sublime sudo svn tmux tmuxinator vagrant z)
+plugins=(brew docker git git-flow github history-substring-search python sudo tmux z 1password)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -108,8 +108,8 @@ export GOPATH=~/go
 #eval "$(pyenv virtualenv-init -)"
 
 # From Homebrew
-source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 fpath=(/usr/local/share/zsh-completions $fpath)
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"

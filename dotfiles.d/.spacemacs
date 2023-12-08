@@ -231,8 +231,8 @@ It should only modify the values of Spacemacs settings."
 
    ;; Default font, or prioritized list of fonts. `powerline-scale' allows to
    ;; quickly tweak the mode-line size to make separators look not too crappy.
-   dotspacemacs-default-font '("Fira Mono"
-                               :size 12
+   dotspacemacs-default-font '("Iosevka"
+                               :size 15
                                :weight normal
                                :width normal)
    ;; The leader key
